@@ -1,4 +1,4 @@
-import { renderComponent, expect } from "../test_helper"
+import { renderComponent, expect } from "../test_helper";
 import App from "../../src/components/app";
 
 
@@ -13,7 +13,7 @@ describe('App', () => {
 
     // Use 'expect' to make an assertion about a target
     expect(component).to.contain("Reactin n Reduxin");
-
+    
   });
 
 });
