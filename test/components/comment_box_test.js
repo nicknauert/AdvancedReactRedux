@@ -1,16 +1,17 @@
 import { renderComponent, expect } from "../test_helper";
-import commentBox from "../../src/components/commentBox";
+import CommentBox from "../../src/components/commentBox";
 
 
 
 describe('Comment Box', () => {
+    it('has a text area', () => {
+        const component = renderComponent(CommentBox)
+        expect(component.find('textarea')).to.exist;
+    });
 
-  it('shows the correct test', () => {
+    it('has a button', () => {
+        expect()
+    });
 
-    const component = renderComponent(App);
 
-    expect(component).to.contain("Reactin n Reduxin");
-    
-  });
-
-});
+})
