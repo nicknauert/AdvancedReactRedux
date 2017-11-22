@@ -9,6 +9,7 @@ describe('App', () => {
   })
 
   it('displays a comment box', () => {
+    
     expect(component.find('.commentBox')).to.exist;
   })
 });
