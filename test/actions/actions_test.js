@@ -11,7 +11,7 @@ describe('actions', () => {
 
         it('has the correct payload', () => {
             const action = saveComment("Action comment");
-            expect(action.payload).to.equal('new comment');
+            expect(action.payload).to.equal('Action comment');
         })
     });
 });
