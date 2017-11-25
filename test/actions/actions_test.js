@@ -5,11 +5,13 @@ import { saveComment } from '../../src/actions';
 describe('actions', () => {
     describe('saveComment', () => {
         it('has the correct type', () => {
-            expect(SAVE_COMMENT).to.contain('save_comment');
+            const action = saveComment();
+            expect(action.type).to.equal(SAVE_COMMENT);
         })
 
         it('has the correct payload', () => {
-            expect(saveComment.payload).to.be('string');
+            const action = saveComment("Action comment");
+            expect(action.payload).to.equal('new comment');
         })
     });
 });
