@@ -6,10 +6,13 @@ describe('App', () => {
 
   beforeEach(() => {
     component = renderComponent(App);
-  })
+  });
 
   it('displays a comment box', () => {
-    
     expect(component.find('.commentBox')).to.exist;
-  })
+  });
+
+  it('shows a comment list', () => {
+    expect(component.find('.commentList')).to.exist;
+  });
 });
