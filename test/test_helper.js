@@ -1,6 +1,7 @@
 import jsdom from 'jsdom';
 import _$ from 'jquery';
-import { expect } from 'chai';
+import chai, { expect } from 'chai';
+import chaiJquery from 'chai-jquery';
 import TestUtils from 'react-addons-test-utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -25,10 +26,14 @@ function renderComponent(ComponentClass, props, state){
 }
 
 // build helper for simulating events
-$.find.simulate = function(eventName, value) {
+$.fn.simulate = function(eventName, value) {
+  if (value) {
+    this.val(value);
+  }
   TestUtils.Simulate[eventName](this[0]);
 }
 
 // Set up chai-jquery
+chaiJquery( chai, chai.util, $);
 
 export { renderComponent, expect };
